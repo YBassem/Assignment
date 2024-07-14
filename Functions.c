@@ -66,6 +66,7 @@ void Calculator(int num1, int num2,char op){
 }
 
 int main(){
+    /*===========problem 2===========*/
     /*unsigned int x,y;
     scanf("%d%d",&x,&y);
     if(isMultiple(x,y)){
@@ -74,6 +75,9 @@ int main(){
         printf("%d is not a multiple of %d\n",x,y);
     }*/
 
+
+
+    /*===========problem 4===========*/
     /*unsigned int x;
     scanf("%d",&x);
     if(isPrime(x)){
@@ -82,6 +86,8 @@ int main(){
         printf("%d is not a prime number\n",x);
     }*/
 
+
+    /*===========problem 5===========*/
     /*char op;
     scanf("%c",&op);
     unsigned int x,y;
