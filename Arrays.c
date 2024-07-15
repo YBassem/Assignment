@@ -139,6 +139,26 @@ int freqArr(int* arr,int len){
 
 }
 
+int maxOcc(int* arr,int len,int target){
+    int max = 0,count = 1;
+
+    for(int i = 0;i<len;++i){
+        if(arr[i]!=target){
+            continue;
+        }
+        if(arr[i]==target && arr[i+1] ==target){
+            count++;
+            continue;
+        }
+        if(count>max)  {
+            max = count;
+            count = 1;
+        }
+    }
+    return max;
+
+}
+
 int main(){
     /*==========Problem 1==========*/
     /*int x = 0x11223344;
@@ -320,8 +340,15 @@ int main(){
 
    /*==========Problem 12==========*/
 
+    /*int  x[] = {1, 1, 1, 5, 5, 5, 3, 3, 5, 5, 5, 5};
+    int size = sizeof(x)/sizeof(x[0]);
     
+    
+    printf("Enter elem to search: ");
+    int elem;
+    scanf("%d",&elem);
 
+    printf("max number of consecutive elements in an array %d\n",maxOcc(x,size,elem));*/
 
 
     
