@@ -81,7 +81,7 @@ int rec_BinarySearch(int* arr,int len,int target,int low,int high){
          rec_BinarySearch(arr,len,target,low,mid-1);
     }   
     
-    return -1;
+   
 }
 
 int getSecMax(int* arr ,int len){
@@ -271,6 +271,7 @@ int main(){
     for(int i=0;i<size;++i){
         scanf("%d",&arr[i]);
     }
+    bubbleSort(arr,size);
     printf("Enter elem to search: ");
     int elem;
     scanf("%d",&elem);
