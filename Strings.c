@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "Strings.h"
 #include <stdlib.h>
 
 void toUpper(char* letter){
@@ -97,8 +98,7 @@ char check_mirror(char* arry){
 
 }
 
-
-int main(){
+//int main(){
     /*==========Problem 1==========*/
     /*char name[8] = "youssef";
     toUpper(name);
@@ -157,8 +157,7 @@ int main(){
 
 
 
-
     
 
     
-}
+//}

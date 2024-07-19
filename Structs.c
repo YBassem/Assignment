@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include "Strings.c"
 struct Person
 {
     char* name;
@@ -8,8 +8,8 @@ struct Person
 };
 
 void createPerson(struct Person *p,char* name,int age){
-    p->name = malloc(strlen(name)+1);
-    strcpy(p->name,name);
+    p->name = malloc(Strlen(name)+1);
+    Strcpy(p->name,name);
     p->age = age;
 }
 
