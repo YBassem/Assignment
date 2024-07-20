@@ -20,8 +20,5 @@ void printPerson(struct Person *p){
 
 
 int main(){
-    struct Person p1;
-    createPerson(&p1,"Youssef",20);
-    printPerson(&p1);
 
 }
