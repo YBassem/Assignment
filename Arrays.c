@@ -126,16 +126,12 @@ void removeDuplicates(int* arr,int size,int* newSize){
 
 int freqArr(int* arr,int len){
     int freq[len*10] ;
-    for(int i = 0;i<len ;++i){
-        freq[i] = -1;
-    }
-    
     for(int i = 0;i<len;++i){
         freq[arr[i]]++;
     }
 
-    int max = getMax(freq,len*10);
-    return Sequential_Search(freq,len*10,max);
+    int max = getMax(freq,len*5);
+    return Sequential_Search(freq,len*5,max);
 
 }
 
@@ -333,10 +329,10 @@ int main(){
     /*==========Problem 11==========*/
 
 
-    /*int x[] = {1,2,3,8,6,5,3,9,3,4,3,7,2};
+    /*int x[] = {1,2,3,8,2,6,5,2,3,9,3,4,3,3,7,2};
     int size = sizeof(x)/sizeof(x[0]);
-    printf("most occurrence element in the array is %d\n",freqArr(x,size));
-    */
+    printf("most occurrence element in the array is %d\n",freqArr(x,size));*/
+    
 
 
    /*==========Problem 12==========*/
