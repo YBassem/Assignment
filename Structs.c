@@ -55,8 +55,8 @@ Time* timeDiff(Time* t1,Time* t2){
 
 typedef struct{
     char* name;
-    int age;
     long unsigned int id;
+    int age; 
     float gpa;
 }Student;
 
