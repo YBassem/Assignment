@@ -51,7 +51,7 @@ Time* timeDiff(Time* t1,Time* t2){
 }
 
 int main(){
-    
+    /*=============Problem 2==============*/
     Time  t1 = {11,30};//Departur time
     Time t2 = {1,10};//Arrival Time
 
