@@ -74,10 +74,22 @@ void printLinkedList(SinglyLinkedList* L) {
 
 
 
+typedef struct{
+    char* name;
+    int age;
+    int id;
+    float gpa;
+}Student;
+
+
+typedef struct{
+    int hours;
+    int min;
+    int sec;
+}Time;
 
 int main(){
     
-
-    
+   
 
 }
