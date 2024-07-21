@@ -55,7 +55,7 @@ int main(){
     Time  t1 = {11,30};//Departur time
     Time t2 = {1,10};//Arrival Time
 
-    Time* t3 = timeDiff(&t1,&t2);
+    Time* t3 = timeDiff(&t1,&t2);//Trip time
     
     printf("Trip Time is %d hours and %d minutes\n",t3->hours,t3->min);
     
