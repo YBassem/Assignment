@@ -50,15 +50,6 @@ Time* timeDiff(Time* t1,Time* t2){
     return t3;
 }
 
-<<<<<<< HEAD
-void printLinkedList(SinglyLinkedList* L) {
-    SinglyNode* cur = L->head;
-    while (cur) {
-        printf("%d ", cur->data);
-        cur = cur->next;
-    }
-    printf("\n");
-}
 
 
 
@@ -69,17 +60,7 @@ typedef struct{
     float gpa;
 }Student;
 
-
-typedef struct{
-    int hours;
-    int min;
-    int sec;
-}Time;
-
-int main(){
-    
-   
-=======
+  
 int main(){
     /*=============Problem 2==============*/
     Time  t1 = {11,30};//Departur time
@@ -89,6 +70,6 @@ int main(){
     
     printf("Trip Time is %d hours and %d minutes\n",t3->hours,t3->min);
     
->>>>>>> Youssef
+
 
 }
