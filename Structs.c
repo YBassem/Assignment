@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "Strings.c"
+#include <string.h>
+
 struct Person
 {
     char* name;
@@ -8,8 +9,8 @@ struct Person
 };
 
 void createPerson(struct Person *p,char* name,int age){
-    p->name = malloc(Strlen(name)+1);
-    Strcpy(p->name,name);
+    p->name = malloc(strlen(name)+1);
+    strcpy(p->name,name);
     p->age = age;
 }
 
@@ -18,66 +19,45 @@ void printPerson(struct Person *p){
 }
 
 
-typedef struct{
-    int data;
-    struct SinglyNode* next;
-
-}SinglyNode;
-
-
-typedef struct{
-    SinglyNode*head;
-}SinglyLinkedList;
+typedef struct 
+{
+    int hours;
+    int min;
+}Time;
 
 
-void initNode(SinglyNode* newNode, int val, SinglyNode* nex) {
-    newNode->data = val;
-    newNode->next = nex;
-}
-
-void createLinkedList(SinglyLinkedList* L) {
-    L->head = NULL;
-}
-
-void insert_At_First(SinglyLinkedList* L, int val) {
-    SinglyNode* cur = (SinglyNode*)malloc(sizeof(SinglyNode));
-    initNode(cur, val, L->head);
-    L->head = cur;
-}
-
-void insert_At_End(SinglyLinkedList* L, int val){
-    SinglyNode* cur = (SinglyNode*)malloc(sizeof(SinglyNode));
-    if(!L->head){
-        initNode(cur, val, L->head);
-        L->head = cur;
-        return;
+Time* timeDiff(Time* t1,Time* t2){
+    Time* t3 = (Time*)malloc(sizeof(Time*));
+    if(t1->hours<=t2->hours){
+        t3->hours = t2->hours - t1->hours -1;
+    }else{
+        t3->hours = t2->hours + 11 - t1->hours  ;
     }
-    initNode(cur, val, NULL);
-    SinglyNode* newNode = L->head;
-    while (newNode->next)
-    {
-        newNode = newNode ->next;
+    if(t2->min <t1->min){
+        t3->min = t2->min +60- t1->min;
+        return t3;
     }
 
-    newNode->next = cur;
+    if(t1->min == t2->min){
+        t3->min = 0;
+        return t3;
+    }
+
+    t3->min = 60 - (t2->min-t1->min);
+
+
     
+    return t3;
 }
-
-void printLinkedList(SinglyLinkedList* L) {
-    SinglyNode* cur = L->head;
-    while (cur) {
-        printf("%d ", cur->data);
-        cur = cur->next;
-    }
-    printf("\n");
-}
-
-
-
 
 int main(){
     
+    Time  t1 = {11,30};//Departur time
+    Time t2 = {1,10};//Arrival Time
 
+    Time* t3 = timeDiff(&t1,&t2);
+    
+    printf("Trip Time is %d hours and %d minutes\n",t3->hours,t3->min);
     
 
 }
