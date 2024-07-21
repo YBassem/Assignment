@@ -56,19 +56,34 @@ Time* timeDiff(Time* t1,Time* t2){
 typedef struct{
     char* name;
     int age;
-    int id;
+    long unsigned int id;
     float gpa;
 }Student;
 
+
+void printStudent(Student s){
+    printf("Student name is %s\nAge = %d\nStudent ID: %lu\nStudent CGPA: %0.2f\n",s.name,s.age,s.id,s.gpa);
+}
   
 int main(){
+
+    /*=============Problem 1==============*/
+
+    /*Student s1 ;
+    s1.name = "Youssef";
+    s1.age = 20;
+    s1.id = 1220212;
+    s1.gpa = 3.82;
+    printStudent(s1);*/
+
+    
     /*=============Problem 2==============*/
-    Time  t1 = {11,30};//Departur time
+    /*Time  t1 = {11,30};//Departur time
     Time t2 = {1,10};//Arrival Time
 
     Time* t3 = timeDiff(&t1,&t2);//Trip time
     
-    printf("Trip Time is %d hours and %d minutes\n",t3->hours,t3->min);
+    printf("Trip Time is %d hours and %d minutes\n",t3->hours,t3->min);*/
     
 
 
