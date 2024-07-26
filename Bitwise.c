@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 /*=================Swapping Algorithms=================*/
 
 void swap1(unsigned int* a,unsigned int* b){
@@ -58,7 +57,14 @@ unsigned int BinToDec(unsigned int* binary,unsigned int len){
     }
     return dec;
 }
-
+void dectobin(int x){
+    if(x==0){
+        return;
+    }
+    
+    dectobin(x/2);
+    printf("%d ",x%2);
+}
 /*==============================================================*/
 
 int main(){
@@ -169,8 +175,6 @@ int main(){
     //swap3(&x,&y);
     //swap4(&x,&y);
     printf("%d\n%d",x,y);*/
-    
-
 
     return 0;
 }

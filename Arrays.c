@@ -7,6 +7,13 @@ void swap1( int* a, int* b){
     *b=temp;
 }
 
+void swap2(int* a,int* b){
+    *a=*a^*b;
+    *b=*a^*b;
+    *a=*a^*b;
+}
+
+
 void bubbleSort(int* arr ,int len){
     for(int i= 0 ;i<len;++i){
         for(int  j = 0 ;j<len - i - 1 ;++j){
@@ -75,7 +82,7 @@ int rec_BinarySearch(int* arr,int len,int target,int low,int high){
     if(arr[mid]==target){
         return mid;
     }
-    if(arr[mid]>target){
+    if(arr[mid]<target){
         rec_BinarySearch(arr,len,target,mid + 1,high);
     }else{
          rec_BinarySearch(arr,len,target,low,mid-1);
@@ -98,7 +105,7 @@ int getSecMax(int* arr ,int len){
 
 void revArr(int* arr,int len){
     for(int i = 0;i<len/2;++i){
-        swap1(&arr[i],&arr[len  - i -1]);
+        swap2(&arr[i],&arr[len  - i -1]);
     }
 }
 
@@ -290,7 +297,7 @@ int main(){
 
     /*==========Problem 9==========*/
 
-    /*int size;
+    int size;
     printf("Enter size: ");
     scanf("%d",&size);
 
@@ -305,7 +312,7 @@ int main(){
     printf("arr after reversing : ");
     for(int i=0;i<size;++i){
        printf("%d ",arr[i]);
-    }*/
+    }
 
 
     /*==========Problem 10==========*/

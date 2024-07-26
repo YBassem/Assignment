@@ -84,7 +84,4 @@ int main(){
     Time* t3 = timeDiff(&t1,&t2);//Trip time
     
     printf("Trip Time is %d hours and %d minutes\n",t3->hours,t3->min);*/
-    
-
-
 }
